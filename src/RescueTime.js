@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class RescueTime extends Component {
   render() {
     return (
-      <div className="RescueTime">
+      <div className="widget">
         RESCUETIME
       </div>
     );

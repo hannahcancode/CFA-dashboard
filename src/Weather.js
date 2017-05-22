@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Weather extends Component {
   render() {
     return (
-      <div className="Weather">
+      <div className="widget">
         WEATHER
       </div>
     );
