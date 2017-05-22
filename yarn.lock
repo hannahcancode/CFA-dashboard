@@ -4787,6 +4787,10 @@ react-error-overlay@^1.0.3:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+"react-forecast@git://github.com/darkbtf/react-forecast.git":
+  version "0.0.7"
+  resolved "git://github.com/darkbtf/react-forecast.git#77c7c41c1ae5293c7f077e9259e67732e9981527"
+
 react-scripts@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.0.3.tgz#0fe04dd43b359495d568be6e9342b5c0cad8763c"

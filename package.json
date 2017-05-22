@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-forecast": "git://github.com/darkbtf/react-forecast.git"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"

@@ -15,3 +15,6 @@
   padding: 2em 1em;
 }
 
+.weather {
+  flex-basis: 60%;
+}
