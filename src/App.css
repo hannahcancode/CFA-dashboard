@@ -4,7 +4,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   vertical-align: center;
-  margin-top: 10%;
+  height: 100vh;
 }
 
 .widget {
@@ -40,4 +40,8 @@
   position: absolute;
   top: 52px;
   left: 52px;
+}
+
+.weather {
+  flex-basis: 60%;
 }
