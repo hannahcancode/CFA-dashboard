@@ -3,15 +3,6 @@ import ProgressLabel from 'react-progress-label';
 
 
 class Fitbit extends Component {
-  getFitbitData() {
-    return fetch('https://api.fitbit.com/1/user/4GNHKM/activities/date/2017-05-22.json?access_token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0R05IS00iLCJhdWQiOiIyMjhKTk0iLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyYWN0IiwiZXhwIjoxNDk1NTE5NjMzLCJpYXQiOjE0OTU0MzMyMzN9.9q8R-09rkjs1qTPXnGEMfgWdZRH4boVLDUS3APQ4X0k')
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
 
   render() {
 
