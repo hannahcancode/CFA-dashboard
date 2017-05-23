@@ -6,12 +6,17 @@ import RescueTimeGraph from './RescueTimeGraph';
 class RescueTime extends Component {
   constructor(props){
     super(props);
+    this.getRescueTime = this.getRescueTime.bind(this);
+// Sets the state parameters
     this.state = {
       data: [],
-      avg: 0
+      avg: 0,
+      productivityStats: []
     }
   };
 
+
+// componentDidMount calls the function so it is mounted
   componentDidMount() {
     this.getRescueTime()
   };
@@ -26,27 +31,25 @@ class RescueTime extends Component {
 , 0) / response.data.length;
         this.setState({
           data: response.data,
-          avg: avg.toFixed(1)
+          avg: avg.toFixed(1),
+          productivityStats: [response.data[13].very_productive_percentage, response.data[13].productive_percentage, response.data[13].neutral_percentage, response.data[13].distracting_percentage]
         })
-        this.dailyStats()
       })
       .catch(function (error) {
         console.log(error);
     });
   };
 
-  dailyStats() {
-    const stats = [this.state.data[13].very_productive_percentage, this.state.data[13].productive_percentage, this.state.data[13].neutral_percentage, this.state.data[13].distracting_percentage]
-    console.log(stats)
-  }
+
 
   render() {
+
     return (
       <div className="widget">
         Hello world
         <h2>Your average fortnightly productivity pulse is {this.state.avg} </h2>
         <RescueTimeGraph
-          productivityData={this.state.stats}
+          productivityData={this.state.productivityStats}
         />
       </div>
     );
