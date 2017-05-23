@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
-    "react-forecast": "git://github.com/darkbtf/react-forecast.git"
+    "react-forecast": "git://github.com/darkbtf/react-forecast.git",
+    "react-infinite-calendar": "^2.3.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"

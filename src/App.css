@@ -4,7 +4,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   vertical-align: center;
-  margin-top: 10%;
+  height: 100vh;
 }
 
 .widget {
