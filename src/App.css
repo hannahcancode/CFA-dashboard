@@ -17,29 +17,61 @@
 
 .fitbit-m-nested {
   position: relative;
-  height: 200px;
+  min-height: 200px;
 }
 
 .fitbit-progress-bar {
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .fitbit-1 {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: auto;
 }
 
 .fitbit-2 {
   position: absolute;
   top: 26px;
-  left: 26px;
+  left: auto;
 }
 
 .fitbit-3 {
   position: absolute;
   top: 52px;
-  left: 52px;
+  left: auto;
+}
+
+.pink {
+  background: #E91E63
+}
+
+.green {
+  background: #4CAF50
+}
+
+.blue {
+  background: #2196F3
+}
+
+.box {
+  border-radius: 5px;
+  padding: 10px;
+  width: 3px;
+  height: 3px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  vertical-align: center;
+  padding-top: 20px;
+}
+
+.label {
+  padding: 3px 20px 0px 10px;
 }
 
 .weather {

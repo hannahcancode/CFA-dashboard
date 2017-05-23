@@ -3,8 +3,8 @@ import Fitbit from './Fitbit';
 import RescueTime from './RescueTime';
 import Weather from './Weather';
 import Calendar from './Calendar';
-import Meetup from './Meetup';
 import GraphTest from './GraphTest';
+import MeditateTimer from './MeditateTimer';
 
 import './App.css';
 
@@ -16,7 +16,7 @@ class App extends Component {
         <RescueTime />
         <Weather />
         <Calendar />
-        <Meetup />
+        <MeditateTimer />
       </div>
     );
   }
