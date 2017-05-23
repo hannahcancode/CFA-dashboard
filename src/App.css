@@ -4,7 +4,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   vertical-align: center;
-  margin-top: 10%;
+  height: 100vh;
 }
 
 .widget {
@@ -15,3 +15,33 @@
   padding: 2em 1em;
 }
 
+.fitbit-m-nested {
+  position: relative;
+  height: 200px;
+}
+
+.fitbit-progress-bar {
+  position: relative;
+}
+
+.fitbit-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.fitbit-2 {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+}
+
+.fitbit-3 {
+  position: absolute;
+  top: 52px;
+  left: 52px;
+}
+
+.weather {
+  flex-basis: 60%;
+}

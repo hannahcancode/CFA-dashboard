@@ -6,7 +6,11 @@
     "axios": "^0.16.1",
     "react": "^15.5.4",
     "react-chartjs": "^0.8.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-progress-label": "^1.2.2",
+    "react-forecast": "git://github.com/darkbtf/react-forecast.git",
+    "react-infinite-calendar": "^2.3.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"
