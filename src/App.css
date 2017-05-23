@@ -77,3 +77,13 @@
 .weather {
   flex-basis: 60%;
 }
+
+.rescuetime {
+  vertical-align: center;
+}
+.graphbox {
+  height: 30px;
+  width: 80px;
+  background: grey;
+  background-color: grey;
+}
