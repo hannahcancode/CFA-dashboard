@@ -72,6 +72,7 @@ class Fitbit extends Component {
 
     return (
       <div className="widget">
+        <h2>Fitbit</h2>
         <div className="fitbit-m-nested">
           <div className="fitbit-progress-bar">
             <ProgressLabel
@@ -84,7 +85,7 @@ class Fitbit extends Component {
               size={200}
               fillColor="black"
               trackColor="#330000"
-              progressColor="#FF0000" />
+              progressColor="#E91E63" />
             <ProgressLabel
               className="fitbit-2"
               progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
@@ -95,7 +96,7 @@ class Fitbit extends Component {
               size={148}
               fillColor="none"
               trackColor="#003300"
-              progressColor="#00FF00" />
+              progressColor="#4CAF50" />
             <ProgressLabel
               className="fitbit-3"
               progress={(data.summary.floors/data.goals.floors*100)}
@@ -106,8 +107,16 @@ class Fitbit extends Component {
               size={96}
               fillColor="none"
               trackColor="#04252D"
-              progressColor="#36BADE" />
+              progressColor="#2196F3" />
             </div>
+          </div>
+          <div className="legend">
+            <div className="pink box"></div>
+            <div className="label">Steps</div>
+            <div className="green box"></div>
+            <div className="label">Minutes</div>
+            <div className="blue box"></div>
+            <div className="label">Floors</div>
           </div>
       </div>
     );
