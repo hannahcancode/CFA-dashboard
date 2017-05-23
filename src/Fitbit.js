@@ -13,10 +13,6 @@ class Fitbit extends Component {
       });
   }
 
-
-
-
-
   render() {
 
     const data = {
@@ -65,7 +61,7 @@ class Fitbit extends Component {
         ],
         "elevation": 33.53,
         "fairlyActiveMinutes": 4,
-        "floors": 11,
+        "floors": 10,
         "lightlyActiveMinutes": 86,
         "marginalCalories": 442,
         "sedentaryMinutes": 823,
@@ -76,12 +72,12 @@ class Fitbit extends Component {
 
     return (
       <div className="widget">
-        <div class="m-nested">
-          <div className="progress-bar">
+        <div className="fitbit-m-nested">
+          <div className="fitbit-progress-bar">
             <ProgressLabel
-              className="label-1"
-              progress={(this.minutes*100)}
-              startDegree={60}
+              className="fitbit-1"
+              progress={(data.summary.steps/data.goals.steps*100)}
+              startDegree={0}
               progressWidth={20}
               trackWidth={20}
               cornersWidth={10}
@@ -90,9 +86,9 @@ class Fitbit extends Component {
               trackColor="#330000"
               progressColor="#FF0000" />
             <ProgressLabel
-              className="label-2"
-              progress={(this.floors*100)}
-              startDegree={60}
+              className="fitbit-2"
+              progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
+              startDegree={0}
               progressWidth={20}
               trackWidth={20}
               cornersWidth={10}
@@ -101,9 +97,9 @@ class Fitbit extends Component {
               trackColor="#003300"
               progressColor="#00FF00" />
             <ProgressLabel
-              className="label-3"
-              progress={(this.steps*100)}
-              startDegree={60}
+              className="fitbit-3"
+              progress={(data.summary.floors/data.goals.floors*100)}
+              startDegree={0}
               progressWidth={20}
               trackWidth={20}
               cornersWidth={10}
