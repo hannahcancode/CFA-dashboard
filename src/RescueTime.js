@@ -12,6 +12,7 @@ class RescueTime extends Component {
       data: [],
       avg: 0,
       productivityStats: []
+      productivityLabels: []
     }
   };
 
@@ -32,7 +33,8 @@ class RescueTime extends Component {
         this.setState({
           data: response.data,
           avg: avg.toFixed(1),
-          productivityStats: [response.data[13].very_productive_percentage, response.data[13].productive_percentage, response.data[13].neutral_percentage, response.data[13].distracting_percentage]
+          productivityStats: [response.data[13].very_productive_percentage, response.data[13].productive_percentage, response.data[13].neutral_percentage, response.data[13].distracting_percentage],
+          productivityLabels: ['very_productive_percentage', 'productive_percentage', 'neutral_percentage', 'distracting_percentage']
         })
       })
       .catch(function (error) {
@@ -50,6 +52,7 @@ class RescueTime extends Component {
         <h2>Your average fortnightly productivity pulse is {this.state.avg} </h2>
         <RescueTimeGraph
           productivityData={this.state.productivityStats}
+          productivityLabels={this.state.productivityLabels}
         />
       </div>
     );
