@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import RescueTimeGraph from './RescueTimeGraph';
+// import RescueTimeGraph from './RescueTimeGraph';
+import GraphTest from './GraphTest';
 
 
 class RescueTime extends Component {
@@ -11,8 +12,13 @@ class RescueTime extends Component {
     this.state = {
       data: [],
       avg: 0,
-      productivityStats: []
-      productivityLabels: []
+      productivityStats: [],
+      productivityLabels: [
+        'very_productive_percentage',
+        'productive_percentage',
+        'neutral_percentage',
+        'distracting_percentage'
+      ]
     }
   };
 
@@ -33,8 +39,11 @@ class RescueTime extends Component {
         this.setState({
           data: response.data,
           avg: avg.toFixed(1),
-          productivityStats: [response.data[13].very_productive_percentage, response.data[13].productive_percentage, response.data[13].neutral_percentage, response.data[13].distracting_percentage],
-          productivityLabels: ['very_productive_percentage', 'productive_percentage', 'neutral_percentage', 'distracting_percentage']
+          productivityStats: [
+            response.data[13].very_productive_percentage, response.data[13].productive_percentage,
+            response.data[13].neutral_percentage,
+            response.data[13].distracting_percentage
+          ]
         })
       })
       .catch(function (error) {
@@ -45,15 +54,15 @@ class RescueTime extends Component {
 
 
   render() {
-
     return (
       <div className="widget">
         Hello world
         <h2>Your average fortnightly productivity pulse is {this.state.avg} </h2>
-        <RescueTimeGraph
-          productivityData={this.state.productivityStats}
-          productivityLabels={this.state.productivityLabels}
-        />
+        {/* <RescueTimeGraph
+
+        /> */}
+        <GraphTest productivityData={this.state.productivityStats} productivityLabels={this.state.productivityLabels} />
+
       </div>
     );
   }

@@ -4,6 +4,7 @@ import RescueTime from './RescueTime';
 import Weather from './Weather';
 import Calendar from './Calendar';
 import Meetup from './Meetup';
+import GraphTest from './GraphTest';
 
 import './App.css';
 
