@@ -4818,6 +4818,10 @@ react-error-overlay@^1.0.3:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+react-progress-label@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-progress-label/-/react-progress-label-1.2.2.tgz#b40145fd1dec5130da66dc3789667b6de8a2f45e"
+
 "react-forecast@git://github.com/darkbtf/react-forecast.git":
   version "0.0.7"
   resolved "git://github.com/darkbtf/react-forecast.git#77c7c41c1ae5293c7f077e9259e67732e9981527"
