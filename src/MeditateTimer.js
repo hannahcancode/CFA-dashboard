@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 class MeditateTimer extends Component {
   constructor() {
@@ -43,15 +45,15 @@ class MeditateTimer extends Component {
 
   render() {
     return (
-      <div className="widget">
+      <div>
         <h2>Meditation Timer</h2>
-        Seconds Elapsed: {this.state.secondsElapsed}
-        <br />
+        <h3>Seconds Elapsed:</h3>
+        <h2>{this.state.secondsElapsed}</h2>
         <br />
 
-        {!this.state.playing ? <button onClick={() => this.start()}>&#9658;</button> : <button onClick={() => this.pause()}>&#10074;&#10074;</button>}
+        {!this.state.playing ? <RaisedButton label="Start" onClick={() => this.start()} /> : <RaisedButton label="Pause" onClick={() => this.pause()} />}
 
-        <button onClick={() => this.reset()}>reset</button>
+        <RaisedButton label="Reset" onClick={() => this.reset()} />
       </div>
     );
   }

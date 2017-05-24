@@ -10,12 +10,10 @@ class Calendar extends Component {
     let lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
 
     return (
-      <div className="widget">
+      <div>
         <InfiniteCalendar
-          displayOptions={{
-            layout: 'landscape'
-          }}
-          width={600}
+
+          width={350}
           height={200}
           selected={today}
           disabledDays={[0,6]}

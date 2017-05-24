@@ -66,7 +66,7 @@ class Fitbit extends Component {
     }
 
     return (
-      <div className="widget">
+      <div>
         <h2>Fitbit</h2>
         <div className="fitbit-m-nested">
           <div className="fitbit-progress-bar">
@@ -113,11 +113,11 @@ class Fitbit extends Component {
           </div>
           <div className="legend">
             <div className="pink box"></div>
-            <div className="label">Steps</div>
+            <div className="label">{data.summary.steps} Steps</div>
             <div className="green box"></div>
-            <div className="label">Minutes</div>
+            <div className="label">{data.summary.veryActiveMinutes} Minutes</div>
             <div className="blue box"></div>
-            <div className="label">Floors</div>
+            <div className="label">{data.summary.floors} Floors</div>
           </div>
       </div>
     );
