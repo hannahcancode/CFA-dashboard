@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-    util, Chart, DataSeries, BarChart, Pie, XAxis, YAxis, Stack, Group
-} from 'diffract';
+import { Pie, DataSeries, Chart } from 'diffract';
 import PropTypes from 'prop-types';
 
 const colors = ['#E91E63', '#2196F3', '#FF9800', '#4CAF50', '#673AB7'];

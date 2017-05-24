@@ -55,8 +55,7 @@ class RescueTime extends Component {
 
   render() {
     return (
-      <div className="widget">
-        Hello world
+      <div>
         <h2>Your average fortnightly productivity pulse is {this.state.avg} </h2>
         {/* <RescueTimeGraph
 

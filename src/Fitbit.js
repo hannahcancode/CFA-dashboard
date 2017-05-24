@@ -71,7 +71,7 @@ class Fitbit extends Component {
     }
 
     return (
-      <div className="widget">
+      <div>
         <h2>Fitbit</h2>
         <div className="fitbit-m-nested">
           <div className="fitbit-progress-bar">
