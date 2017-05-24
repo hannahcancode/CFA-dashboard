@@ -81,7 +81,7 @@ class Fitbit extends Component {
               fillColor="black"
               trackColor="#330000"
               progressColor="#E91E63"
-              onClick={(event, progress) => this.setState({selected: {value: Math.floor(progress)}})} />
+              onClick={() => this.setState({ activityAmount: data.summary.steps })} />
             <ProgressLabel
               className="fitbit-2"
               progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
@@ -93,7 +93,7 @@ class Fitbit extends Component {
               fillColor="none"
               trackColor="#003300"
               progressColor="#4CAF50"
-              onClick={(event, progress) => {this.setState({selected: {value: progress }}); console.log(this.state.selected) }} />
+              onClick={() => this.setState({ activityAmount: data.summary.activeMinutes })} />
             <ProgressLabel
               className="fitbit-3"
               progress={(data.summary.floors/data.goals.floors*100)}
@@ -105,8 +105,11 @@ class Fitbit extends Component {
               fillColor="none"
               trackColor="#04252D"
               progressColor="#2196F3"
-              onClick={(event, progress) => this.setState({selected: {value: Math.floor(progress)}})} />
+              onClick={() => this.setState({ activityAmount: data.summary.floors })} />
             </div>
+          </div>
+          <div className="legend">
+            <div>{this.state.activityAmount}</div>
           </div>
           <div className="legend">
             <div className="pink box"></div>
