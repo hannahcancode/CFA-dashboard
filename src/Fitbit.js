@@ -68,7 +68,8 @@ class Fitbit extends Component {
 
     return (
       <div>
-        <h2>Fitbit</h2>
+        <h2>Daily FitBit Stats</h2>
+        <hr />
         <div className="fitbit-m-nested">
           <div className="fitbit-progress-bar">
             <ProgressLabel

@@ -12,8 +12,10 @@ class Calendar extends Component {
     return (
       <div>
         <InfiniteCalendar
-
-          width={350}
+          displayOptions={{
+            layout: 'landscape'
+          }}
+          width={700}
           height={200}
           selected={today}
           disabledDays={[0,6]}

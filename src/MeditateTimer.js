@@ -47,6 +47,7 @@ class MeditateTimer extends Component {
     return (
       <div>
         <h2>Meditation Timer</h2>
+        <hr />
         <h3>Seconds Elapsed:</h3>
         <h2>{this.state.secondsElapsed}</h2>
         <br />

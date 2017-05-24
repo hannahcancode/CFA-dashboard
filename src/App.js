@@ -32,21 +32,22 @@ class App extends Component {
             titleStyle={titleStyle}
             zDepth={1}
             style={{
-              backgroundColor: '#326EFF'
+              backgroundColor: 'linear-gradient(to right, #021B79, #0575E6)'
             }}
         />
           <Paper className="widget" style={style} zDepth={3}>
             <Fitbit />
           </Paper>
-          <Paper className="widget" style={style} zDepth={3}>
-            <Calendar />
-          </Paper>
-
           <Paper style={style} zDepth={3}>
             <RescueTime />
           </Paper>
-          <Paper className="widget" className="widget" style={style} zDepth={3}>
+
+          <Paper className="widget weather" style={style} zDepth={3}>
             <Weather />
+          </Paper>
+
+          <Paper className="widget calendar" style={style} zDepth={3}>
+            <Calendar />
           </Paper>
           <Paper className="widget" style={style} zDepth={3}>
             <MeditateTimer />

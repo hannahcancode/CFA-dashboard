@@ -3,8 +3,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
   vertical-align: center;
-  height: 100vh;
+  height: auto;
   font-family: 'Roboto', 'Helvetica', sans-serif;
+  background: #56CCF2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+hr {
+  border-color: #56CCF2;
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .widget {
@@ -81,4 +90,12 @@
   width: 80px;
   background: grey;
   background-color: grey;
+}
+
+.weather {
+  flex-basis: 80%
+}
+
+.calendar {
+  flex-basis: 60%
 }

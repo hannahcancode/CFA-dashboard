@@ -14,10 +14,10 @@ class RescueTime extends Component {
       avg: 0,
       productivityStats: [],
       productivityLabels: [
-        'very_productive_percentage',
-        'productive_percentage',
-        'neutral_percentage',
-        'distracting_percentage'
+        'Very productive percentage',
+        'Productive percentage',
+        'Neutral percentage',
+        'Distracting percentage'
       ]
     }
   };
@@ -55,8 +55,10 @@ class RescueTime extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Your average fortnightly productivity pulse is {this.state.avg} </h2>
+      <div className="widget">
+        <h2>RescueTime Productivity Pulse: {this.state.avg} </h2>
+        <hr />
+
         {/* <RescueTimeGraph
 
         /> */}

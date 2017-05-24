@@ -40,7 +40,7 @@ class GraphTest extends Component {
                         onClick={(event, value, index) => this.setState({selected: {index: index, value: Math.floor(value)}})}
                         style={(d, i) => ({fill: this.getColors(i)})}>
                         <text className="donut-title" textAnchor="middle"
-                            x={0} y={0} fontSize={18}>
+                            x={0} y={0} fontSize={22}>
                             {this.state.selected.value}
                         </text>
                         <text className="donut-subtitle" textAnchor="middle"
