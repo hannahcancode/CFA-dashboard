@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import ProgressLabel from 'react-progress-label';
 
-
 class Fitbit extends Component {
-  getFitbitData() {
-    return fetch('https://api.fitbit.com/1/user/4GNHKM/activities/date/2017-05-22.json?access_token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0R05IS00iLCJhdWQiOiIyMjhKTk0iLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyYWN0IiwiZXhwIjoxNDk1NTE5NjMzLCJpYXQiOjE0OTU0MzMyMzN9.9q8R-09rkjs1qTPXnGEMfgWdZRH4boVLDUS3APQ4X0k')
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  constructor(props) {
+    super(props);
+    this.state = {
+        selected: {index: 0, value: 0}
+    };
   }
 
   render() {
-
     const data = {
       "activities": [],
       "goals": {
@@ -85,7 +80,8 @@ class Fitbit extends Component {
               size={200}
               fillColor="black"
               trackColor="#330000"
-              progressColor="#E91E63" />
+              progressColor="#E91E63"
+              onClick={() => this.setState({ activityAmount: data.summary.steps })} />
             <ProgressLabel
               className="fitbit-2"
               progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
@@ -96,7 +92,8 @@ class Fitbit extends Component {
               size={148}
               fillColor="none"
               trackColor="#003300"
-              progressColor="#4CAF50" />
+              progressColor="#4CAF50"
+              onClick={() => this.setState({ activityAmount: data.summary.activeMinutes })} />
             <ProgressLabel
               className="fitbit-3"
               progress={(data.summary.floors/data.goals.floors*100)}
@@ -107,8 +104,12 @@ class Fitbit extends Component {
               size={96}
               fillColor="none"
               trackColor="#04252D"
-              progressColor="#2196F3" />
+              progressColor="#2196F3"
+              onClick={() => this.setState({ activityAmount: data.summary.floors })} />
             </div>
+          </div>
+          <div className="legend">
+            <div>{this.state.activityAmount}</div>
           </div>
           <div className="legend">
             <div className="pink box"></div>
