@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import ProgressLabel from 'react-progress-label';
 
-
 class Fitbit extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        selected: {index: 0, value: 0}
+    };
+  }
 
   render() {
-
     const data = {
       "activities": [],
       "goals": {
@@ -76,7 +80,8 @@ class Fitbit extends Component {
               size={200}
               fillColor="black"
               trackColor="#330000"
-              progressColor="#E91E63" />
+              progressColor="#E91E63"
+              onClick={(event, progress) => this.setState({selected: {value: Math.floor(progress)}})} />
             <ProgressLabel
               className="fitbit-2"
               progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
@@ -87,7 +92,8 @@ class Fitbit extends Component {
               size={148}
               fillColor="none"
               trackColor="#003300"
-              progressColor="#4CAF50" />
+              progressColor="#4CAF50"
+              onClick={(event, progress) => {this.setState({selected: {value: progress }}); console.log(this.state.selected) }} />
             <ProgressLabel
               className="fitbit-3"
               progress={(data.summary.floors/data.goals.floors*100)}
@@ -98,7 +104,8 @@ class Fitbit extends Component {
               size={96}
               fillColor="none"
               trackColor="#04252D"
-              progressColor="#2196F3" />
+              progressColor="#2196F3"
+              onClick={(event, progress) => this.setState({selected: {value: Math.floor(progress)}})} />
             </div>
           </div>
           <div className="legend">
