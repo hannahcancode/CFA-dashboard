@@ -15,7 +15,6 @@ class RescueTimeGraph extends Component {
 
 
   render() {
-    console.log(this.props.productivityData)
     const width = 640;
     const height = 240;
      return (
