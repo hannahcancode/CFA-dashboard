@@ -5,7 +5,8 @@ class Fitbit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        selected: {index: 0, value: 0}
+        activityAmount: "",
+        activity: ""
     };
   }
 
@@ -81,7 +82,7 @@ class Fitbit extends Component {
               fillColor="black"
               trackColor="#330000"
               progressColor="#E91E63"
-              onClick={() => this.setState({ activityAmount: data.summary.steps })} />
+              onMouseOver={() => this.setState({ activityAmount: data.summary.steps, activity: "Steps" })} />
             <ProgressLabel
               className="fitbit-2"
               progress={((data.summary.veryActiveMinutes/data.goals.activeMinutes)*100)}
@@ -93,7 +94,7 @@ class Fitbit extends Component {
               fillColor="none"
               trackColor="#003300"
               progressColor="#4CAF50"
-              onClick={() => this.setState({ activityAmount: data.summary.activeMinutes })} />
+              onMouseOver={() => this.setState({ activityAmount: data.summary.veryActiveMinutes, activity: "Minutes" })} />
             <ProgressLabel
               className="fitbit-3"
               progress={(data.summary.floors/data.goals.floors*100)}
@@ -105,19 +106,19 @@ class Fitbit extends Component {
               fillColor="none"
               trackColor="#04252D"
               progressColor="#2196F3"
-              onClick={() => this.setState({ activityAmount: data.summary.floors })} />
+              onMouseOver={() => this.setState({ activityAmount: data.summary.floors , activity: "Floors"})} />
             </div>
           </div>
           <div className="legend">
-            <div>{this.state.activityAmount}</div>
+            <div>{this.state.activityAmount} {this.state.activity}</div>
           </div>
           <div className="legend">
             <div className="pink box"></div>
-            <div className="label">{data.summary.steps} Steps</div>
+            <div className="label">Steps</div>
             <div className="green box"></div>
-            <div className="label">{data.summary.veryActiveMinutes} Minutes</div>
+            <div className="label">Minutes</div>
             <div className="blue box"></div>
-            <div className="label">{data.summary.floors} Floors</div>
+            <div className="label">Floors</div>
           </div>
       </div>
     );
